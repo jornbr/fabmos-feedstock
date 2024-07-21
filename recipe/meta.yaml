@@ -1,5 +1,5 @@
 {% set version = "0.2.0" %}
-{% set build = 0 %}
+{% set build = 1 %}
 
 package:
   name: fabmos
@@ -18,13 +18,12 @@ requirements:
   build:
     - python                                 # [build_platform != target_platform]
     - cross-python_{{ target_platform }}     # [build_platform != target_platform]
-    - python                                 # [build_platform != target_platform]
-    - cross-python_{{ target_platform }}     # [build_platform != target_platform]
     - cmake
     - make                                   # [not win]
     - {{ compiler('fortran') }}              # [not win]
-    - {{ compiler('m2w64_fortran') }}        # [win]
     - {{ stdlib("c") }}                      # [not win] on Windows this pulls in VS and causes cmake to use its cl.exe, which is incompatible with the m2w64 version of windres.exe
+    - {{ compiler('m2w64_fortran') }}        # [win]
+    - {{ stdlib("m2w64_c") }}                # [win]
   host:
     - python {{ python }}
     - pip
