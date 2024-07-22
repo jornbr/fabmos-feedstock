@@ -51,6 +51,7 @@ about:
   license: GPL-2.0-only
   license_family: GPL
   license_file: LICENSE
+  doc_url: https://github.com/BoldingBruggeman/fabmos/wiki
 
 extra:
   recipe-maintainers:
