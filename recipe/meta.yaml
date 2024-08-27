@@ -1,4 +1,4 @@
-{% set version = "0.2.1" %}
+{% set version = "0.2.2" %}
 {% set build = 0 %}
 
 package:
@@ -8,7 +8,7 @@ package:
 source:
   #git_url: https://github.com/BoldingBruggeman/fabmos.git
   url: https://github.com/BoldingBruggeman/fabmos/releases/download/v{{ version }}/fabmos.tar.gz
-  sha256: ad1db129c0a3565525cac7b35745717f3597a02b1510975229a289ae26922863
+  sha256: efbcba9629997d0a78123a766c7e60cf9b463dd23daf6219e27484eefc160f81
 
 build:
   number: {{ build }}
@@ -36,7 +36,7 @@ requirements:
     - xarray
     - mpi4py
     - netCDF4
-    - pygetm >=0.9
+    - pygetm >=0.9.2
     - scipy
     - h5py
     #- m2w64-gcc-libgfortran      # [win] NB m2w64-gcc-libs and m2w64-gcc-libs-core are added automatically by m2w64 compiler functions under build
