@@ -25,7 +25,7 @@ requirements:
     #- {{ compiler('m2w64_fortran') }}        # [win]
     #- {{ stdlib("m2w64_c") }}                # [win]
     - {{ compiler('c') }}                    # [win] to locate msvc
-    - {{ stdlib("c") }}                      # [win]
+    #- {{ stdlib("c") }}                      # [win]
   host:
     - python {{ python }}
     - pip
